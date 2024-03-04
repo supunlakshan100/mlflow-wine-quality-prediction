@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/AI%20%26%20Machine%20Learning/MLOPS/MLflow%20Test/mlruns/0/6f5603da39914c10b9233f4173bf0813/artifacts
+end_time: 1709533972999
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6f5603da39914c10b9233f4173bf0813
+run_name: adventurous-pig-280
+run_uuid: 6f5603da39914c10b9233f4173bf0813
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709533954829
+status: 3
+tags: []
+user_id: laksh
