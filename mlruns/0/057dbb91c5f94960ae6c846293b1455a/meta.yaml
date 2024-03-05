@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/AI%20%26%20Machine%20Learning/MLOPS/MLflow%20Test/mlruns/0/057dbb91c5f94960ae6c846293b1455a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 057dbb91c5f94960ae6c846293b1455a
+run_name: bustling-shrike-857
+run_uuid: 057dbb91c5f94960ae6c846293b1455a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709615939418
+status: 1
+tags: []
+user_id: laksh

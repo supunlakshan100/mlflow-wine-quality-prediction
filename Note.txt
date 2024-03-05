@@ -1,0 +1,8 @@
+Terminal Commands
+
+mlflow ui- for view on mlflow 
+
+
+Notes-:
+
+* The model is better whitch have Minimum "RMSE" value and Highest R2 score value 

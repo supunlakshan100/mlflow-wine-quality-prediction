@@ -5,12 +5,10 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import ElasticNet 
-#ElasticNet is a linear regression model trained with L1 and L2 prior as regularizer.
+from sklearn.linear_model import ElasticNet  #ElasticNet is a linear regression model trained with L1 and L2 prior as regularizer.
 from urllib.parse import urlparse #parse a URL into six components, returning a 6-item named tuple
 import mlflow   #MLflow is an open source platform for the complete machine learning lifecycle
-from mlflow.models.signature import infer_signature 
-#infer_signature is used to infer the signature of a model
+from mlflow.models.signature import infer_signature #infer_signature is used to infer the signature of a model
 import mlflow.sklearn 
 
 import logging
@@ -22,6 +20,8 @@ logger = logging.getLogger(__name__)
 #logging.WARN is used to log the warning messages
 #logging.getLogger(__name__) is used to get the logger object
 #logging.basicConfig() is used to configure the logging module, it is used to set the threshold level of the logger
+
+
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
@@ -64,10 +64,10 @@ if __name__ == "__main__":
 
 
     with mlflow.start_run():
-        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42) #ElasticNet model  is trained with L1 and L2 prior as regularizer
         lr.fit(train_x, train_y)
 
-        predicted_qualities = lr.predict(test_x)
+        predicted_qualities = lr.predict(test_x) #predict the test_x, and store the result in predicted_qualities
 
         (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
@@ -83,8 +83,13 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2) #metric r2
         mlflow.log_metric("mae", mae) #metric mae
 
-        predictions= lr.predict(test_x)
-        signature= infer_signature(train_x,predictions)
+        ''' predictions= lr.predict(test_x)
+        signature= infer_signature(train_x,predictions)'''
+
+        remote_server_uri = "https://dagshub.com/supunlakshan100/mlflow-wine-quality-prediction.mlflow"
+        mlflow.set_tracking_uri(remote_server_uri)
+        
+        
 
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
@@ -98,5 +103,5 @@ if __name__ == "__main__":
             mlflow.sklearn.log_model(lr, "model", registered_model_name="ElasticnetWineModel")
             
         else:
-            mlflow.sklearn.log_model(lr, "model", signature=signature)
+            mlflow.sklearn.log_model(lr, "model")
 

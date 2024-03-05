@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/AI%20%26%20Machine%20Learning/MLOPS/MLflow%20Test/mlruns/0/74bcea63148a4fa79fb1b75f929eff72/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 74bcea63148a4fa79fb1b75f929eff72
+run_name: clean-wasp-846
+run_uuid: 74bcea63148a4fa79fb1b75f929eff72
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709581991759
+status: 1
+tags: []
+user_id: laksh
