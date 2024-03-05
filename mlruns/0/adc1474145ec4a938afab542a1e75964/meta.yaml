@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/AI%20%26%20Machine%20Learning/MLOPS/MLflow%20Test/mlruns/0/adc1474145ec4a938afab542a1e75964/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: adc1474145ec4a938afab542a1e75964
+run_name: beautiful-bat-507
+run_uuid: adc1474145ec4a938afab542a1e75964
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709620630498
+status: 1
+tags: []
+user_id: laksh

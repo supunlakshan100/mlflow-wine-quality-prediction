@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/AI%20%26%20Machine%20Learning/MLOPS/MLflow%20Test/mlruns/0/db9a7fa892c94833932fa174f919f469/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: db9a7fa892c94833932fa174f919f469
+run_name: suave-shoat-485
+run_uuid: db9a7fa892c94833932fa174f919f469
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709622608020
+status: 1
+tags: []
+user_id: laksh
